@@ -1,40 +1,29 @@
 <template>
   <div id="container">
+    <app-header></app-header>
     <router-view></router-view>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 export default {
- 
-}
+  components: {
+    appHeader: Header,
+    appFooter: Footer
+  }
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  box-sizing: border-box;
 }
 
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 </style>
